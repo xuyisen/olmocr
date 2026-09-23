@@ -213,8 +213,7 @@ async def render_pdf_with_playwright(html_content, output_pdf_path, png_width, p
                 await page.add_script_tag(path=katex_autorender_js_path)
 
                 # Run the KaTeX auto-renderer immediately rather than waiting for DOMContentLoaded
-                await page.evaluate(
-                    """
+                await page.evaluate("""
                     renderMathInElement(document.body, {
                         // customised options
                         // • auto-render specific keys, e.g.:
@@ -225,8 +224,7 @@ async def render_pdf_with_playwright(html_content, output_pdf_path, png_width, p
                         // • rendering keys, e.g.:
                         throwOnError: false
                     });
-                """
-                )
+                """)
 
                 # Save as PDF with formatting options
                 await page.pdf(

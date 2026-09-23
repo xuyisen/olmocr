@@ -209,7 +209,7 @@ class TestRotationCorrection:
         # Counter to track number of API calls
         call_count = 0
 
-        async def mock_apost(url, json_data):
+        async def mock_apost(url, json_data, api_key=None):
             nonlocal call_count
             call_count += 1
 
@@ -311,7 +311,7 @@ This is the corrected text from the document."""
         # Counter to track number of API calls
         call_count = 0
 
-        async def mock_apost(url, json_data):
+        async def mock_apost(url, json_data, api_key=None):
             nonlocal call_count
             call_count += 1
 
@@ -420,7 +420,7 @@ Document is now correctly oriented after 180 degree rotation."""
         # Counter to track number of API calls
         call_count = 0
 
-        async def mock_apost(url, json_data):
+        async def mock_apost(url, json_data, api_key=None):
             nonlocal call_count
             call_count += 1
 

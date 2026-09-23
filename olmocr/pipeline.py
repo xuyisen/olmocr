@@ -1041,7 +1041,7 @@ def print_stats(args, root_work_queue):
         futures = {executor.submit(process_output_file, item): item for item in done_work_items}
 
         for future in tqdm(as_completed(futures), total=len(futures)):
-            (doc_count, input_tokens, output_tokens, pages, fallback_pages, processed_paths, long_context_docs, long_context_tokens) = future.result()
+            doc_count, input_tokens, output_tokens, pages, fallback_pages, processed_paths, long_context_docs, long_context_tokens = future.result()
             docs_total += doc_count
             input_tokens_total += input_tokens
             output_tokens_total += output_tokens

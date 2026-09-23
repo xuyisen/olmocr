@@ -352,8 +352,7 @@ class FrontMatterOutputFormat(PipelineStep):
         page_data = sample["page_data"]
         assert type(page_data) is PageResponse
 
-        sample["response"] = (
-            f"""---
+        sample["response"] = f"""---
 primary_language: {page_data.primary_language}
 is_rotation_valid: {page_data.is_rotation_valid}
 rotation_correction: {page_data.rotation_correction}
@@ -362,7 +361,6 @@ is_diagram: {page_data.is_diagram}
 ---
 {page_data.natural_text if page_data.natural_text is not None and len(page_data.natural_text.strip()) > 0 else ""}
 """.strip()
-        )
 
         return sample
 
