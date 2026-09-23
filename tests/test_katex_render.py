@@ -1,5 +1,7 @@
 import unittest
+
 from olmocr.bench.katex import compare_rendered_equations, render_equation
+
 
 class TestRenderedEquationComparison(unittest.TestCase):
     def test_exact_match(self):

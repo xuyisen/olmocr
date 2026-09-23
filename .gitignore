@@ -85,3 +85,8 @@ __pycache__
 
 docs/build
 site/
+# Shell redirection artifacts
+=[0-9]*
+>[0-9]*
+*.tmp
+*.log
